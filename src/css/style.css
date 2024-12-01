@@ -1,0 +1,183 @@
+body{
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #674ab0;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:"logo logo"
+                        "banner texto-principal"
+                        "rodape rodape";
+ 
+    margin: 30px;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.banner{
+    grid-area: banner;
+    padding:20px 40px 0px 20px;
+    /* width: 50%; */
+}
+
+.banner img{
+    width: 600px;
+    padding-top: 25px;
+    position: relative;
+    top:25px;
+}
+
+.texto-principal{
+    grid-area: texto-principal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.texto-principal h1{
+    font-family: 'poppins';
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    padding: 20px 0px;
+    margin: 0px 50px 0px 0px;
+}
+
+.texto-principal p{
+    font-family: 'roboto';
+    font-weight: 300;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 0px 20px 0px;
+
+    margin: 0px 90px 0px 0px;
+}
+
+.texto-principal button{
+    width:150px;
+    height: 50px;
+    color: #674ab0;
+    font-size: 16px;
+    border-radius: 50px;
+    border: hidden;
+    box-shadow: 2px 2px 10px #272727;
+}
+
+button:hover{
+    background-color: #e882e8;
+    color: #fff;
+}
+
+.rodape{
+    grid-area: rodape;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fa-facebook-f{
+    color: #fff;
+    font-size: 20px;
+    border: solid 1px;
+    padding: 10px 13px;
+    border-radius: 60px;
+    margin: 0px 10px;
+}
+
+.fa-twitter{
+    color: #fff;
+    font-size: 20px;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 60px;
+    margin: 0px 10px;
+}
+
+.fa-instagram{
+    color: #fff;
+    font-size: 20px;
+    border: solid 1px;
+    padding: 10px 11px;
+    border-radius: 60px;
+    margin: 0px 10px;
+}
+
+.fab:hover{
+    color: #e957e9;
+}
+
+@media(max-width:375px){
+
+    .container{
+        display: flex;
+        flex-direction: column;  
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img{
+        width: 150px;
+    }
+
+    .banner{
+        display: flex;
+        justify-content: center;
+    }
+    .banner img{
+        width: 250px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .texto-principal{
+        display: flex;
+        justify-content: center;
+    }
+    .texto-principal h1{
+        text-align: center;
+        font-size: 20px;
+        margin:0;
+        padding: 0;
+    }
+
+    .texto-principal p{
+        text-align: center;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .texto-principal button{
+        width:150px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+
+    .texto-principal a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .rodape{
+        display: flex;
+        justify-content: center;
+    }
+
+    .fab{
+        font-size: 10px;
+    }
+}
